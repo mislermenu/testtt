@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Визитка</title>
+    <!-- Подключаем иконки FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* Карточка визитки */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 90%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Аватарка (замените ссылку на свою фотографию) */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h1 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        /* Кнопки соц сетей */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .social-btn {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-5px);
+            background: white;
+            color: #764ba2;
+        }
+
+        /* Счетчик посещений */
+        .counter-container {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 14px;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .counter-img {
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Замените src на ссылку вашего фото -->
+        <img src="https://i.pinimg.com/736x/44/49/19/444919312fadb87cfe1e93fe571ca4ad.jpg" alt="Моё фото" class="avatar">
+        
+        <h1>Иван Иванов</h1>
+        <p>Веб-разработчик</p>
+
+        <div class="social-links">
+            <!-- Замените # на ваши ссылки -->
+            <a href="https://t.me/ваш_ник" class="social-btn" target="_blank" title="Telegram">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+            <a href="https://vk.com/ваш_ид" class="social-btn" target="_blank" title="VK">
+                <i class="fab fa-vk"></i>
+            </a>
+            <a href="https://wa.me/79990000000" class="social-btn" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://github.com/ваш_профиль" class="social-btn" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+        <!-- Счетчик посещений -->
+        <div class="counter-container">
+            <i class="fas fa-eye"></i>
+            <span>Просмотров: </span>
+            <!-- Этот скрипт берет данные с бесплатного счетчика -->
+            <img src="https://counter.yandex.ru/watch/000000" style="display:none" alt="" />
+            <a href="https://metrika.yandex.ru/" target="_blank">
+                <img src="https://informer.yandex.ru/informer/000000/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="000000" data-lang="ru" />
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
